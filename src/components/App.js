@@ -6,19 +6,15 @@ class App extends React.Component {
 
 	state = { images: [] };
 
-async onSearchSubmit(term) {
+onSearchSubmit = async term => {
 	//state.images is going to be an array so we can use `map`
-
 	const response = await axios.get('https://api.unsplash.com/search/photos', {
-			params: {
-				query: term
-			},
+			params: { query: term },
 			headers: {
 				Authorization: "Client-ID 47edb515c9f5a6cbdfdcabdeaa4e826ddb0fc6ca8132c66f3a2e7c2135c79fce"
 			}
 		});
-		console.log(response);
-
+		this.setState({ images: response.data.results })
 	}
 
 	render() {
