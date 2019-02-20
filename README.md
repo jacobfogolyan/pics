@@ -1,4 +1,10 @@
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## API Request
+
+- API Technology axios (Data fetching)
+- Axios needs params.query, and headers.Authorization (Case sentivie)
 
 ## Available Scripts
 
